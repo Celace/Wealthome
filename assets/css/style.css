@@ -163,7 +163,7 @@ html {
 }
 
 body {
-  background-color: var(--neutral-90);
+  background-color: var(--neutral-98);
   color: var(--neutral-5);
   font-size: var(--fs-body-medium);
   line-height: var(--lh-body-medium);
@@ -647,14 +647,99 @@ body {
 /*-----------------------------------*\
   #PROPERTY
 \*-----------------------------------*/
+.property {
+  padding-block-start: 60px;
+}
+
+.property .section-text {
+  margin-block: 8px 16px;
+  color: var(--neutral-30);
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
 
 /*-----------------------------------*\
   #FEATURE
 \*-----------------------------------*/
 
+.feature-banner {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: var(--radius-extra-large);
+}
+
+.feature-content {
+  padding: 24px 16px 0;
+}
+
+.feature-content,
+.feature-text {
+  margin-block: 16px;
+}
+
+.feature-text .feature-item {
+  color: var(--neutral-30);
+}
+
+.feature-list {
+  display: grid;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-icon {
+  color: var(--primary-100);
+  font-size: 2.2rem;
+}
+
 /*-----------------------------------*\
   #VIDEO
 \*-----------------------------------*/
+
+.video-card {
+  height: 260px;
+  border-radius: 32px;
+  background: linear-gradient(0deg, #0000004d, #0000004d),
+    url('../images/video-card.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.play-btn {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  background-color: var(--neutral-100);
+  color: var(--primary-100);
+  border-radius: var(--radius-circle);
+  animation: pulse 1.5s var(--transition-easing-quick) forwards infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ffffff80;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #ffffff00;
+  }
+}
+
+.play-btn .material-symbols-rounded {
+  font-size: 4rem;
+  font-variation-settings: 'FILL' 1;
+}
 
 /*-----------------------------------*\
   #STORY
